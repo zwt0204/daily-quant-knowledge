@@ -23,3 +23,4 @@
 - [Day 13 - 最小策略总结](notes/2026/2026-04-08-day13-最小策略总结.md)
 - [Day 14 - 周复盘](notes/2026/2026-04-09-day14-weekly-review.md)
 - Day 15+: auto-updated by daily cron workflow
+- [Day 15 - 整理成完整脚本](notes/2026/2026-04-10-day15-整理成完整脚本.md)
