@@ -1,10 +1,8 @@
 import pandas as pd
 
 df = pd.DataFrame({
-    'close': [10.0, 10.3, 10.1, 10.5],
-    'position': [0, 0, 1, 1]
+    "date": ["2026-03-28", "2026-03-29", "2026-03-30", "2026-03-31"],
+    "close": [10.0, 10.2, 10.1, 10.4]
 })
 
-df['ret'] = df['close'].pct_change().fillna(0)
-df['strategy_ret'] = df['position'].shift(1).fillna(0) * df['ret']
-print(df)
+print(df.head())

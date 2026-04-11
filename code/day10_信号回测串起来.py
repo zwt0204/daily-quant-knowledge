@@ -1,15 +1,6 @@
 import pandas as pd
 
-df = pd.DataFrame({
-    'close': [10, 10.2, 10.5, 10.1, 10.8, 11.0]
-})
-
-df['ma2'] = df['close'].rolling(2).mean()
-df['ma3'] = df['close'].rolling(3).mean()
-df['signal'] = (df['ma2'] > df['ma3']).astype(int)
-df['position'] = df['signal'].shift(1).fillna(0)
-df['ret'] = df['close'].pct_change().fillna(0)
-df['strategy_ret'] = df['position'] * df['ret']
-df['equity'] = (1 + df['strategy_ret']).cumprod()
-
+df = pd.DataFrame({"close": [10, 10.1, 10.3, 10.2, 10.5, 10.8, 10.7]})
+df["ma3"] = df["close"].rolling(3).mean()
+df["ma5"] = df["close"].rolling(5).mean()
 print(df)

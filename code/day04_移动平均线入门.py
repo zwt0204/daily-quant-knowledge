@@ -1,9 +1,9 @@
-import pandas as pd
+cash = 100000
+position_ratio = 0.5
+max_loss_ratio = 0.05
 
-df = pd.DataFrame({
-    'close': [10.0, 10.3, 10.1, 10.5, 10.8]
-})
+position_money = cash * position_ratio
+max_loss_money = position_money * max_loss_ratio
 
-df['ma2'] = df['close'].rolling(2).mean()
-df['ma3'] = df['close'].rolling(3).mean()
-print(df)
+print("本次投入资金:", position_money)
+print("这一笔最多愿意亏:", max_loss_money)

@@ -1,8 +1,11 @@
 import pandas as pd
 
 df = pd.DataFrame({
-    'strategy_ret': [0.00, 0.02, -0.01, 0.03, -0.02]
+    "open": [10.0],
+    "high": [10.5],
+    "low": [9.9],
+    "close": [10.3],
+    "volume": [120000]
 })
 
-df['equity'] = (1 + df['strategy_ret']).cumprod()
 print(df)

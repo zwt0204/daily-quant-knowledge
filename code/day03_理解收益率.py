@@ -1,8 +1,8 @@
-import pandas as pd
+profits = [100, -50, 80, -30, 120]
 
-df = pd.DataFrame({
-    'close': [10.0, 10.3, 10.1, 10.5]
-})
+total_profit = sum(profits)
+win_count = len([x for x in profits if x > 0])
+win_rate = win_count / len(profits)
 
-df['ret'] = df['close'].pct_change()
-print(df)
+print("累计收益:", total_profit)
+print("胜率:", win_rate)

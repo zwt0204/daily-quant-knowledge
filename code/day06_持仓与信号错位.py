@@ -1,8 +1,10 @@
-import pandas as pd
+def average(a, b):
+    return (a + b) / 2
 
-df = pd.DataFrame({
-    'signal': [0, 1, 1, 0, 1]
-})
+prices = [10, 10.2, 10.5]
 
-df['position'] = df['signal'].shift(1).fillna(0)
-print(df)
+for p in prices:
+    if p > 10:
+        print("价格大于 10:", p)
+
+print("平均值:", average(10, 12))

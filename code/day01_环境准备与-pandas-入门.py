@@ -1,8 +1,11 @@
-import pandas as pd
+price_today = 105
+ma5 = 103
+ma20 = 100
+holding = False
 
-df = pd.DataFrame({
-    'date': ['2026-03-24', '2026-03-25', '2026-03-26'],
-    'close': [10.0, 10.3, 10.1],
-})
-
-print(df)
+if ma5 > ma20 and not holding:
+    print("买入信号")
+elif ma5 < ma20 and holding:
+    print("卖出信号")
+else:
+    print("继续观察")

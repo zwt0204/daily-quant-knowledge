@@ -1,11 +1,11 @@
-import pandas as pd
-from io import StringIO
+buy_price = 10.0
+sell_price = 10.3
+shares = 100
+fee = 5
+slippage = 3
 
-csv_text = """date,close
-2026-03-24,10.0
-2026-03-25,10.3
-2026-03-26,10.1
-"""
+gross_profit = (sell_price - buy_price) * shares
+net_profit = gross_profit - fee - slippage
 
-df = pd.read_csv(StringIO(csv_text))
-print(df.head())
+print("毛收益:", gross_profit)
+print("净收益:", net_profit)
